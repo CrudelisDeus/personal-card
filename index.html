@@ -259,6 +259,26 @@
             .main-body-right {
                 display: none;
             }
+
+            .main-body {
+                position: relative;
+                overflow: hidden;
+            }
+
+            .main-body::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: url("./img/main/body-logo.svg") center center / contain no-repeat;
+                opacity: 0.1;
+                pointer-events: none;
+                z-index: 0;
+            }
+
+            .main-body > * {
+                position: relative;
+                z-index: 1;
+            }
         }
 
         @media screen and (max-width: 1068px) {

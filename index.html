@@ -5,46 +5,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dmytro Shvydenko</title>
 
-    <!-- font -->
+    <!-- font: roboto -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <style>
-        html, body {
-            overflow-x: hidden;
-            width: 100%;
-        }
-
-        * {
+        /* reset styles */
+        *,
+        *::before,
+        *::after {
             margin: 0;
             padding: 0;
-        }
-
-        .main {
-            background: linear-gradient(to bottom, #3B3A41 40%, #701096 100%);
+            border: 0;
             box-sizing: border-box;
-            padding: 10px;
         }
 
-        .main-stroke {
+        ul, ol {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        em, i {
+            font-style: normal;
+        }
+
+        strong, b {
+            font-weight: normal;
+        }
+
+        input, button, textarea, select {
+            font: inherit;
+            color: inherit;
+            background: none;
+            border: none;
+            outline: none;
+        }
+
+        body {
+            line-height: 1;
+            background: #fff;
+            color: #000;
+        }
+
+        /* body */
+        body {
+            background: linear-gradient(to bottom, #3B3A41 40%, #701096 100%);
+            /* height: 100vh; */
+            font-family: "Roboto";
+            font-size: 24px;
+            font-weight: 400;
+            text-decoration: none;
+            color: white;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .main {
+            height: calc(100vh - 20px);
+            margin: 10px;
             border: 1px solid rgba(255, 255, 255, 0.4);
             border-radius: 60px;
             background: rgba(0, 0, 0, 0);
             display: flex;
             flex-direction: column;
-            box-sizing: border-box;
-            /* height: 98vh; */
+            max-width: 1920px;
+            overflow: hidden;
         }
-
+        
+        /* header */
         .main-header {
-            padding: 50px;
             display: flex;
+            align-items: center;
             justify-content: space-between;
+            padding: 50px;
             padding-bottom: 30px;
-        }
 
+        }
         .main-header-logo {
             display: flex;
             align-items: center;
@@ -52,19 +99,10 @@
         }
 
         .main-header-logo p {
-            font-family: "Roboto", sans-serif;
             font-size: 32px;
-            font-weight: 400;
-            font-style: normal;
-            font-optical-sizing: auto;
-            color: #ffffff;
         }
-        
-        .main-header-menu {
-            display: flex;
-            align-items: center;
-            gap: 30px;
 
+        .main-header-menu {
             padding: 30px 30px;
             border-radius: 60px;
 
@@ -74,13 +112,16 @@
         }
 
         .main-header-menu a {
-            font-family: "Roboto";
-            font-size: 24px;
-            font-weight: 400;
-            text-decoration: none;
-
-            color: white;
             padding: 0 15px;
+        }
+
+
+        .main-header-menu-first {
+            padding-left: 0 !important;
+        }
+
+        .main-header-menu-end {
+            padding-right: 0 !important;
         }
 
         .main-header-btn {
@@ -96,120 +137,92 @@
             align-items: center;
         }
 
-        .main-header-btn a {
-            font-family: "Roboto", sans-serif;
-            text-decoration: none;
-            font-size: 24px;
-            font-weight: 400;
-            font-style: normal;
-            font-optical-sizing: auto;
-            color: #ffffff;
-        }
+        /* body */
 
         .main-body {
+            display: flex;
             flex: 1;
-            display: flex;
-            padding: 50px;
-            padding-top: 0px;
+            padding: 0px 50px;
+            padding-bottom: 50px;
         }
 
-        .main-body-left-text_main-name {
-            font-family: "Roboto", sans-serif;
-            text-decoration: none;
-            font-size: 128px;
-            font-weight: 400;
-            font-style: normal;
-            font-optical-sizing: auto;
-            color: #ffffff;
-        }
-
-        .main-body-left-text_main-cards {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .main-body-left-text_main {
+        .main-body-left {
             display: flex;
             flex-direction: column;
+            /* justify-content: space-between; */
+        }
+
+        .main-body-left-sd {
+            font-weight: 700;
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+
+        .main-body-left-yc {
+            display: flex;
             justify-content: space-between;
         }
 
-        .main-body-right {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .main-body-left-sd p {
+            font-size: 128px
+        }
+
+        .main-body-left-yc h1 {
+            font-size: 128px;
+        }
+        .main-body-left-yc p {
+            font-size: 24px;
         }
         
-        .main-body-right img {
-            max-width: 100%;
-            width: auto;
-            object-fit: contain;
+        .main-body-right {
+            flex: 1 1 0;
+            min-width: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
-        .main-body-left-text_main-cards h1 {
-            font-family: "Roboto", sans-serif;
-            text-decoration: none;
-            font-size: 128px;
-            font-weight: 400;
-            font-style: normal;
-            font-optical-sizing: auto;
-            color: #ffffff;
+.main-body-right img {
+            /* width: 100%; */
+            max-height: 100%;
         }
-
-        .main-body-left-text_main-cards p {
-            font-family: "Roboto", sans-serif;
-            text-decoration: none;
-            font-size: 24px;
-            font-weight: 400;
-            font-style: normal;
-            font-optical-sizing: auto;
-            color: #ffffff;
-            text-align: center;
-        }
-        /* * { outline: 1px dashed rgba(255,0,0,0.15); } */
     </style>
-
-    <!-- main -->
     <div class="main">
-        <div class="main-stroke">
-            <div class="main-header">
-                <div class="main-header-logo">
-                    <img src="./img/main/logo.svg" alt="devops-logo">
-                    <p>DevOps</p>
+        <div class="main-header">
+            <div class="main-header-logo">
+                <img src="./img/main/logo.svg" alt="devops-logo">
+                <p>DevOps</p>
+            </div>
+            <div class="main-header-menu">
+                <nav>
+                    <a href="#" class="main-header-menu-first">About me</a>
+                    <a href="#">Skills</a>
+                    <a href="#">Resume</a>
+                    <a href="#" class="main-header-menu-end">Contacts</a>
+                </nav>
+            </div>
+            <div class="main-header-btn">
+                <a href="#" class="btn">Contact me</a>
+            </div>
+        </div>
+        <div class="main-body">
+            <div class="main-body-left">
+                <div class="main-body-left-sd">
+                    <p>Shvydenko<br>Dmytro</p>
                 </div>
-                <div class="main-header-menu">
-                    <nav>
-                        <a href="#">About me</a>
-                        <a href="#">Skills</a>
-                        <a href="#">Resume</a>
-                        <a href="#">Contacts</a>
-                    </nav>
-                </div>
-                <div class="main-header-btn">
-                    <a href="#" class="btn">Contact me</a>
+                <div class="main-body-left-yc">
+                    <div class="main-body-left-yc-1">
+                        <h1>5+</h1>
+                        <p>years of<br>experience</p>
+                    </div>
+                    <div class="main-body-left-yc-2">
+                        <h1>8+</h1>
+                        <p>completed<br>projects</p>
+                    </div>
                 </div>
             </div>
-
-            <div class="main-body">
-                <div class="main-body-left-text_main">
-                    <div class="main-body-left-text_main-name">
-                        <p>Shvydenko<br>Dmytro</p>
-                    </div>
-                    <div class="main-body-left-text_main-cards">
-                        <div class="main-body-left-text_main-card-1">
-                            <h1>5+</h1>
-                            <p>years of<br>experience</p>
-                        </div>
-                        <div class="main-body-left-text_main-card-2">
-                            <h1>8+</h1>
-                            <p>complete<br>projects</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="main-body-right">
-                    <img src="./img/main/body-logo.svg" alt="body-logo">
-                </div>
+            <div class="main-body-right">
+                <img src="./img/main/body-logo.svg" alt="body-logo">
             </div>
         </div>
     </div>

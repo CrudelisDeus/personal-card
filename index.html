@@ -76,7 +76,7 @@
         @property --accent {
             syntax: "<color>";
             inherits: true;
-            initial-value: #701096;
+            /* initial-value: #701096; */
         }
         
         @keyframes accentShift {
@@ -154,7 +154,7 @@
             padding-right: 0 !important;
         }
 
-        .main-header-btn {
+        .main-header-btn, .main-header-btn-2 {
             display: inline-block;
             padding: 15px 30px;
             background: var(--accent);
@@ -165,6 +165,10 @@
             text-decoration: none;
             display: flex;
             align-items: center;
+        }
+
+        .main-header-btn-2 {
+            display: none;
         }
 
         /* body */
@@ -195,6 +199,10 @@
             font-size: 128px
         }
 
+        .main-body-left-sd h1 {
+            display: none;
+        }
+
         .main-body-left-yc h1 {
             font-size: 128px;
         }
@@ -214,6 +222,90 @@
         .main-body-right img {
             max-height: 100%;
         }
+
+        /* adaptive */
+        /* @media screen and (max-height: 1080px), 
+        screen and (max-width: 1734) {
+            .main {
+                height: auto;
+                overflow : visible;
+            }
+       }
+        @media screen and (max-width: 1608px) {
+            .main-body-right img {
+                display: none;
+            }
+       } */
+        @media screen and (max-width: 1608px) {
+            .main {
+                width: 100%;
+                max-width: 100%;
+            }
+            .main-body {
+                display: flex;
+                flex: 1;
+                padding: 0 50px 50px;
+                justify-content: center;
+                text-align: center;
+
+            }
+
+            .main-body-right img {
+                display: none;
+            }
+
+            .main-body-right {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: 1068px) {
+            .main-header-menu {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: 800px) {
+            .main-header-btn,
+            .main-header-btn-2,
+            .main-body-left-yc p,
+            body
+            {
+                font-size: 12px;
+            }
+            .main-body-left-yc h1 {
+                font-size: 64px;
+            }
+            .main-header-logo p {
+                font-size: 16px;
+            }
+            .main-body-left-sd p {
+                display: none;
+            }
+            .main-body-left-sd h1 {
+                display: block;
+                font-size: 64px;
+            }
+            .main-body,
+            .main-header {
+                padding: 35px;
+                padding-bottom: 20px;
+                padding-top: 20px;
+            }
+            .main-header-logo img {
+                width: 35px;
+
+            }
+        }
+        @media screen and (max-width: 500px) {
+            .main-header-btn {
+                display: none;
+            }
+            .main-header-btn-2 {
+                display: inline-block;
+                text-align: center;
+            }
+        }
     </style>
     <div class="main">
         <div class="main-header">
@@ -230,11 +322,15 @@
                 </nav>
             </div>
             <a class="main-header-btn btn-contact-me" href="#">Contact me</a>
+            <a class="main-header-btn-2 btn-contact-me" href="#">Contact<br>me</a>
         </div>
         <div class="main-body">
             <div class="main-body-left">
                 <div class="main-body-left-sd">
                     <p>Shvydenko<br>Dmytro</p>
+                    <h1 class="mobile">
+                        Shvydenko Dmytro
+                    </h1>
                 </div>
                 <div class="main-body-left-yc">
                     <div class="main-body-left-yc-1">

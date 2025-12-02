@@ -11,6 +11,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <script>
+        const LINK_ABOUT_ME = "test0";
+        const LINK_SKILLS = "test1";
+        const LINK_RESUME = "test2";
+        const LINK_CONTACTS = "test3";
+        const LINK_CONTACT_ME = "https://t.me/CrudelisDeus";
+
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelector('.btn-about-me').href = LINK_ABOUT_ME;
+            document.querySelector('.btn-skills').href = LINK_SKILLS;
+            document.querySelector('.btn-resume').href = LINK_RESUME;
+            document.querySelector('.btn-contacts').href = LINK_CONTACTS;
+            document.querySelector('.btn-contact-me').href = LINK_CONTACT_ME;
+        });
+    </script>
     <style>
         /* reset styles */
         *,
@@ -61,7 +76,7 @@
         @property --accent {
             syntax: "<color>";
             inherits: true;
-            initial-value: #701096;
+            /* initial-value: #701096; */
         }
         
         @keyframes accentShift {
@@ -211,14 +226,14 @@
             </div>
             <div class="main-header-menu">
                 <nav>
-                    <a href="#" class="main-header-menu-first">About me</a>
-                    <a href="#">Skills</a>
-                    <a href="#">Resume</a>
-                    <a href="#" class="main-header-menu-end">Contacts</a>
+                    <a class="btn-about-me" href="#" class="main-header-menu-first">About me</a>
+                    <a class="btn-skills" href="#">Skills</a>
+                    <a class="btn-resume" href="#">Resume</a>
+                    <a class="btn-contacts" href="#" class="main-header-menu-end">Contacts</a>
                 </nav>
             </div>
             <div class="main-header-btn">
-                <a href="#" class="btn">Contact me</a>
+                <a href="#" class="btn-contact-me">Contact me</a>
             </div>
         </div>
         <div class="main-body">

@@ -58,9 +58,29 @@
             color: #000;
         }
 
+
+
+        @keyframes colorShift {
+            0%, 16% { background: linear-gradient(to bottom, #3B3A41 40%, #701096 100%); }
+            20%, 36% { background: linear-gradient(to bottom, #3B3A41 40%, #961010 100%); }
+            40%, 56% { background: linear-gradient(to bottom, #3B3A41 40%, #929610 100%); }
+            60%, 76% { background: linear-gradient(to bottom, #3B3A41 40%, #109628 100%); }
+            80%, 96% { background: linear-gradient(to bottom, #3B3A41 40%, #104A96 100%); }
+            100% { background: linear-gradient(to bottom, #3B3A41 40%, #701096 100%); }
+        }
+
+        @keyframes buttonColorShift {
+            0%, 16% { background: #701096; }
+            20%, 36% { background: #961010; }
+            40%, 56% { background: #929610; }
+            60%, 76% { background: #109628; }
+            80%, 96% { background: #104A96; }
+            100% { background: #701096; }
+        }
+
         /* body */
         body {
-            background: linear-gradient(to bottom, #3B3A41 40%, #701096 100%);
+            animation: colorShift 15s ease-in-out infinite;
             /* height: 100vh; */
             font-family: "Roboto";
             font-size: 24px;
@@ -127,7 +147,7 @@
         .main-header-btn {
             display: inline-block;
             padding: 15px 30px;
-            background: #6B148F;
+            animation: buttonColorShift 15s ease-in-out infinite;
             color: #fff;
             border-radius: 60px;
             border: 1px solid #fff;
@@ -149,7 +169,6 @@
         .main-body-left {
             display: flex;
             flex-direction: column;
-            /* justify-content: space-between; */
         }
 
         .main-body-left-sd {

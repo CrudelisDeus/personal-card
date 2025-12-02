@@ -58,25 +58,29 @@
             color: #000;
         }
 
-        @property --accent {
-            syntax: "<color>";
-            inherits: true;
-            initial-value: #701096;
+
+
+        @keyframes colorShift {
+            0%, 15% { background: linear-gradient(to bottom, #3B3A41 40%, #701096 100%); }
+            20%, 35% { background: linear-gradient(to bottom, #3B3A41 40%, #961010 100%); }
+            40%, 55% { background: linear-gradient(to bottom, #3B3A41 40%, #929610 100%); }
+            60%, 75% { background: linear-gradient(to bottom, #3B3A41 40%, #109628 100%); }
+            80%, 95% { background: linear-gradient(to bottom, #3B3A41 40%, #104A96 100%); }
+            100% { background: linear-gradient(to bottom, #3B3A41 40%, #701096 100%); }
         }
-        
-        @keyframes accentShift {
-            0%, 15% { --accent: #701096; }
-            20%, 35% { --accent: #961010; }
-            40%, 55% { --accent: #929610; }
-            60%, 75% { --accent: #109628; }
-            80%, 95% { --accent: #104A96; }
-            100% { --accent: #701096; }
+
+        @keyframes buttonColorShift {
+            0%, 15% { background: #701096; }
+            20%, 35% { background: #961010; }
+            40%, 55% { background: #929610; }
+            60%, 75% { background: #109628; }
+            80%, 95% { background: #104A96; }
+            100% { background: #96104A; }
         }
 
         /* body */
         body {
-            animation: accentShift 15s ease-in-out infinite;
-            background: linear-gradient(to bottom, #3B3A41 40%, var(--accent));
+            animation: buttonColorShift 15s ease-in-out infinite;
             /* height: 100vh; */
             font-family: "Roboto";
             font-size: 24px;
@@ -86,7 +90,7 @@
             display: flex;
             justify-content: center;
         }
-
+        
         .main {
             height: calc(100vh - 20px);
             margin: 10px;
@@ -143,7 +147,7 @@
         .main-header-btn {
             display: inline-block;
             padding: 15px 30px;
-            background: var(--accent);
+            animation: buttonColorShift 15s ease-in-out infinite;
             color: #fff;
             border-radius: 60px;
             border: 1px solid #fff;
@@ -187,7 +191,6 @@
         }
         .main-body-left-yc p {
             font-size: 24px;
-            text-align: center;
         }
         
         .main-body-right {
@@ -198,10 +201,10 @@
             align-items: center;
         }
 
-        .main-body-right img {
-                    /* width: 100%; */
-                    max-height: 100%;
-                }
+.main-body-right img {
+            /* width: 100%; */
+            max-height: 100%;
+        }
     </style>
     <div class="main">
         <div class="main-header">

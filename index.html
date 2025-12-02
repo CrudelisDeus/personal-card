@@ -285,6 +285,19 @@
             .main-header-menu {
                 display: none;
             }
+            .main-header-btn {
+                display: none;
+            }
+            .main-header-btn-2 {
+                display: inline-block;
+                text-align: center;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            .main-header-btn-2 img {
+                width: 25px;
+                height: 25px;
+            }
         }
 
         @media screen and (max-width: 800px) {
@@ -310,13 +323,6 @@
             }
         }
         @media screen and (max-width: 500px) {
-            .main-header-btn {
-                display: none;
-            }
-            .main-header-btn-2 {
-                display: inline-block;
-                text-align: center;
-            }
         }
     </style>
     <div class="main">
@@ -334,7 +340,9 @@
                 </nav>
             </div>
             <a class="main-header-btn btn-contact-me" href="#">Contact me</a>
-            <a class="main-header-btn-2 btn-contact-me" href="#">Contact<br>me</a>
+            <a class="main-header-btn-2" href="#">
+                <img src="./img/main/menu.svg" alt="body-menu">
+            </a>
         </div>
         <div class="main-body">
             <div class="main-body-left">

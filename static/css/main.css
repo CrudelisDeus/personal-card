@@ -255,7 +255,7 @@ body {
         content: "";
         position: absolute;
         inset: 0;
-        background: url("./static/img/main/body-logo.svg") center center / contain no-repeat;
+        background: url("../img/body-logo.svg") center center / contain no-repeat;
         opacity: 0.1;
         pointer-events: none;
         z-index: 0;

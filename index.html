@@ -78,7 +78,7 @@
         @property --accent {
             syntax: "<color>";
             inherits: true;
-            initial-value: #701096;
+            /* initial-value: #701096; */
         }
         
         @keyframes accentShift {
@@ -88,6 +88,59 @@
             60%, 75% { --accent: #109628; }
             80%, 95% { --accent: #104A96; }
             100% { --accent: #701096; }
+        }
+
+        .mobile {
+            min-height: 100vh;
+            background: #3B3A41;
+            width: 100%;
+
+            display: flex;
+            flex-direction: column;
+            display: none;
+        }
+
+        .mobile-header {
+
+            display: flex;
+            justify-content: flex-end;
+            padding: 35px;
+            padding-top: 58px;
+            padding-bottom: 20px;
+        }
+
+        .mobile-menu {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .mobile-menu nav{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .main-header-btn-3 {
+            display: inline-block;
+            padding: 15px 30px;
+            background: var(--accent);
+            color: #fff;
+            border-radius: 60px;
+            border: 1px solid #fff;
+            font-size: 24px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .main-header-btn-3 img {
+            width: 17px;
+            height: 17px;
         }
 
         /* body */
@@ -322,6 +375,22 @@
         @media screen and (max-width: 500px) {
         }
     </style>
+    <div class="mobile">
+        <div class="mobile-header">
+            <a class="main-header-btn-3" href="#">
+                <img src="./img/main/close.svg" alt="body-menu">
+            </a>
+        </div>
+        <div class="mobile-menu">
+            <nav>
+                <a class="btn-about-me" href="#" class="main-header-menu-first">About me</a>
+                <a class="btn-skills" href="#">Skills</a>
+                <a class="btn-resume" href="#">Resume</a>
+                <a class="btn-contacts" href="#" class="main-header-menu-end">Contacts</a>
+                <a class="btn-contact-me" href="#">Contact me</a>
+            </nav>  
+        </div>
+    </div>
     <div class="main">
         <div class="main-header">
             <div class="main-header-logo">

@@ -25,23 +25,31 @@
             const openBtn = document.querySelector('.main-header-btn-2');
             const closeBtn = document.querySelector('.main-header-btn-3');
 
-            openBtn.addEventListener('click', (e) => {
-                e.preventDefault();
-                mobile.classList.add('active');
-            });
+            if (openBtn && mobile) {
+                openBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    mobile.classList.add('active');
+                });
+            }
 
-            closeBtn.addEventListener('click', (e) => {
-                e.preventDefault();
-                mobile.classList.remove('active');
-            });
-        });
+            if (closeBtn && mobile) {
+                closeBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    mobile.classList.remove('active');
+                });
+            }
 
-        document.addEventListener("DOMContentLoaded", () => {
-            document.querySelector('.btn-about-me').href = LINK_ABOUT_ME;
-            document.querySelector('.btn-skills').href = LINK_SKILLS;
-            document.querySelector('.btn-resume').href = LINK_RESUME;
-            document.querySelector('.btn-contacts').href = LINK_CONTACTS;
-            document.querySelector('.btn-contact-me').href = LINK_CONTACT_ME;
+            const setHrefForAll = (selector, href) => {
+                document.querySelectorAll(selector).forEach(el => {
+                    el.href = href;
+                });
+            };
+
+            setHrefForAll('.btn-about-me', LINK_ABOUT_ME);
+            setHrefForAll('.btn-skills', LINK_SKILLS);
+            setHrefForAll('.btn-resume', LINK_RESUME);
+            setHrefForAll('.btn-contacts', LINK_CONTACTS);
+            setHrefForAll('.btn-contact-me', LINK_CONTACT_ME);
         });
     </script>
     <style>

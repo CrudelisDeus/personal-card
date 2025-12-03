@@ -6,6 +6,7 @@
     <title>Dmytro Shvydenko</title>
 
     <link rel="icon" href="./favicon.ico">
+    <script src="static/js/main.js"></script> 
 
     <!-- font: roboto -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,45 +14,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <script>
-        const LINK_ABOUT_ME = "test0";
-        const LINK_SKILLS = "test1";
-        const LINK_RESUME = "test2";
-        const LINK_CONTACTS = "test3";
-        const LINK_CONTACT_ME = "https://t.me/CrudelisDeus";
-
-        document.addEventListener("DOMContentLoaded", () => {
-            const mobile = document.querySelector('.mobile2');
-            const openBtn = document.querySelector('.main-header-btn-2');
-            const closeBtn = document.querySelector('.main-header-btn-3');
-
-            if (openBtn && mobile) {
-                openBtn.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    mobile.classList.add('active');
-                });
-            }
-
-            if (closeBtn && mobile) {
-                closeBtn.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    mobile.classList.remove('active');
-                });
-            }
-
-            const setHrefForAll = (selector, href) => {
-                document.querySelectorAll(selector).forEach(el => {
-                    el.href = href;
-                });
-            };
-
-            setHrefForAll('.btn-about-me', LINK_ABOUT_ME);
-            setHrefForAll('.btn-skills', LINK_SKILLS);
-            setHrefForAll('.btn-resume', LINK_RESUME);
-            setHrefForAll('.btn-contacts', LINK_CONTACTS);
-            setHrefForAll('.btn-contact-me', LINK_CONTACT_ME);
-        });
-    </script>
     <style>
         /* reset styles */
         *,
@@ -352,7 +314,7 @@
                 content: "";
                 position: absolute;
                 inset: 0;
-                background: url("./img/main/body-logo.svg") center center / contain no-repeat;
+                background: url("./static/img/main/body-logo.svg") center center / contain no-repeat;
                 opacity: 0.1;
                 pointer-events: none;
                 z-index: 0;
@@ -415,7 +377,7 @@
     <div class="mobile2">
         <div class="mobile-header">
             <a class="main-header-btn-3" href="#">
-                <img src="./img/main/close.svg" alt="body-menu">
+                <img src="./static/img/main/close.svg" alt="body-menu">
             </a>
         </div>
         <div class="mobile-menu">
@@ -431,7 +393,7 @@
     <div class="main">
         <div class="main-header">
             <div class="main-header-logo">
-                <img src="./img/main/logo.svg" alt="devops-logo">
+                <img src="./static/img/main/logo.svg" alt="devops-logo">
                 <p>DevOps</p>
             </div>
             <div class="main-header-menu">
@@ -444,7 +406,7 @@
             </div>
             <a class="main-header-btn btn-contact-me" href="#">Contact me</a>
             <a class="main-header-btn-2" href="#">
-                <img src="./img/main/menu.svg" alt="body-menu">
+                <img src="./static/img/main/menu.svg" alt="body-menu">
             </a>
         </div>
         <div class="main-body">
@@ -467,7 +429,7 @@
                 </div>
             </div>
             <div class="main-body-right">
-                <img src="./img/main/body-logo.svg" alt="body-logo">
+                <img src="./static/img/main/body-logo.svg" alt="body-logo">
             </div>
         </div>
     </div>

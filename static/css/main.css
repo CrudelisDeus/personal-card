@@ -67,15 +67,15 @@ body {
 .mobile2.active {
     transform: translateX(0);
 }
-.counter {
+/* .counter {
     display: inline-block;
     transition: opacity 0.18s ease-out, transform 0.18s ease-out;
-}
+} */
 
-.counter-changing {
+/* .counter-changing {
     opacity: 0;
-    transform: scale(0.1);
-}
+    transform: scale(0.001);
+} */
 .mobile-header {
     display: flex;
     justify-content: flex-end;

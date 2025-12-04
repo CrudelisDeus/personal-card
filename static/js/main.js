@@ -36,10 +36,10 @@ document.addEventListener("DOMContentLoaded", () => {
             el.href = href;
         });
     };
-    setHrefForAll('.btn-about-me', LINK_ABOUT_ME);
+    setHrefForAll('.main-header-menu-first', LINK_ABOUT_ME);
     setHrefForAll('.btn-skills', LINK_SKILLS);
     setHrefForAll('.btn-resume', LINK_RESUME);
-    setHrefForAll('.btn-contacts', LINK_CONTACTS);
+    setHrefForAll('.main-header-menu-end', LINK_CONTACTS);
     setHrefForAll('.btn-contact-me', LINK_CONTACT_ME);
     setHrefForAll('.btn-cv-download', LINK_DOWNLOAD);
     setHrefForAll('.btn-cv-web-view', LINK_WEB_VIEW);

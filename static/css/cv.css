@@ -176,3 +176,15 @@
         width: 80%;
     }
 }
+
+.btn-cv-download:hover {
+    border-end-start-radius: 60px;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.4);
+}
+
+.btn-cv-web-view:hover {
+    border-end-end-radius: 60px;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.4);
+}

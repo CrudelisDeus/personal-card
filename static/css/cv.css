@@ -196,4 +196,12 @@
         border-end-start-radius: 60px;
         border-end-end-radius: 60px;
     }
+    .main-cv-body-right {
+        box-shadow: none !important;
+        padding: 0 !important;
+    }
+    .main-cv-body {
+        background: none;
+        box-shadow: none;
+    }
 }

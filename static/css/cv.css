@@ -160,7 +160,10 @@
         padding-left: 0px;
         padding-right: 0px;
     }
-
+    .main-cv-body-right {
+        padding-bottom: 0px !important;
+    }
+    
 }
 
 @media screen and (max-width: 550px) {

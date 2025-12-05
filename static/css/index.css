@@ -36,4 +36,7 @@
     .main-body-left {
         padding-bottom: 0px;
     }
+    .main-body {
+        padding-bottom: 0px !important;
+    }
 }

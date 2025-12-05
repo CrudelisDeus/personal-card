@@ -30,4 +30,10 @@
         padding-left: 50px;
         padding-right: 50px;
     }
+    .main-body-left {
+        padding-bottom: 50px !important;
+    }
+    .main-body-left {
+        padding-bottom: 0px;
+    }
 }

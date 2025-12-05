@@ -1,6 +1,6 @@
 
 const LINK_ABOUT_ME = "./index.html";
-const LINK_SKILLS = "test1";
+const LINK_SKILLS = "./skills.html";
 const LINK_RESUME = "./cv.html";
 const LINK_CONTACTS = "test3";
 const LINK_CONTACT_ME = "https://t.me/CrudelisDeus";

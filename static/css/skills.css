@@ -1,0 +1,83 @@
+.main-skills-body {
+    display: flex;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.4);
+
+    margin: 0 50px 50px;
+    border-radius: 60px;
+
+    padding: 50px;
+    column-gap: 50px;
+
+    flex: 1;
+}
+
+.main-skills-body-left,
+.main-skills-body-right {
+    flex: 0 0 calc(50% - 25px);
+    min-width: 0;
+}
+
+.main-skills-body-right {
+    border-radius: 40px;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.4);
+    background: none;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 24px;
+
+    height: 100%;
+}
+
+.skill-item {
+    width: 100%;
+    height: 100%;
+
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: none !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 60%;
+
+    cursor: pointer;
+    transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease,
+        background-color 0.15s ease;
+}
+
+
+.skill-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 10px rgba(255, 255, 255, 0.35);
+}
+
+.skill-1 { background-image: url("../img/skill-1.svg"); }
+.skill-2 { background-image: url("../img/skill-2.svg"); }
+.skill-3 { background-image: url("../img/skill-3.svg"); }
+.skill-4 { background-image: url("../img/skill-4.svg"); }
+.skill-5 { background-image: url("../img/skill-5.svg"); }
+.skill-6 { background-image: url("../img/skill-6.svg"); }
+.skill-7 { background-image: url("../img/skill-7.svg"); }
+.skill-8 { background-image: url("../img/skill-8.svg"); }
+.skill-9 { background-image: url("../img/skill-9.svg"); }
+
+.skill-item {
+    width: 150px;       
+    max-width: 150px;
+    aspect-ratio: 1 / 1;
+
+    flex: 0 0 auto;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: none !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 60%;
+}
+

@@ -293,35 +293,6 @@ body {
     }
 }
 
-@media screen and (max-width: 800px), (max-height: 630px) {
-    .main-body-left-yc h1 {
-        font-size: 64px;
-    }
-    .main-body-left-sd p {
-        display: none;
-    }
-    .main-body-left-sd h1 {
-        display: block;
-        font-size: 64px;
-    }
-    .main-body,
-    .main-header {
-        padding: 35px;
-        padding-bottom: 20px;
-        padding-top: 20px;
-    }
-    .main-header-logo img {
-        width: 35px;
-    }
-    .mobile-header {
-        display: flex;
-        justify-content: flex-end;
-        padding: 38px;
-        padding-top: 38px;
-        padding-bottom: 20px;
-    }
-}
-
 .main-header-menu {
     padding: 0;
 }

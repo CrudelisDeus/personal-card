@@ -58,6 +58,6 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
     const updateElement = document.querySelector('.cv-update');
     if (updateElement) {
-        updateElement.textContent = `Update: ${LAST_UPDATE}`;
+        updateElement.textContent = `Last update: ${LAST_UPDATE}`;
     }
 });

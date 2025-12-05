@@ -152,6 +152,15 @@
     .main-cv-body-right-body::before {
         opacity: 0.1;
     }
+    .main-cv-body {
+        background: none;
+        box-shadow: none;
+    }
+    .main-cv-body-right {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
 }
 
 @media screen and (max-width: 550px) {
@@ -200,8 +209,13 @@
         box-shadow: none !important;
         padding: 0 !important;
     }
-    .main-cv-body {
-        background: none;
-        box-shadow: none;
+
+    .main-header-logo img {
+        width: 35px !important;
+    }
+
+    .cv-update {
+        font-size: 20px !important;
     }
 }
+

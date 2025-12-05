@@ -222,3 +222,6 @@
     }
 }
 
+.main-cv-body-left p {
+    color: rgba(255, 255, 255, 0.3) !important; 
+}   

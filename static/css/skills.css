@@ -175,9 +175,11 @@
 
 .main-skills-body-right-body-logo img {
     opacity: 0.4;
+    height: 384px;
 }
 
-.main-skills-body-right-body-info {
+.main-skills-body-right-body-info,
+.main-skills-body-right-footer-name p {
     opacity: 0.6;
 }
 

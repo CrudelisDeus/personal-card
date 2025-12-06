@@ -19,8 +19,7 @@
 }
 
 .main-skills-body-right {
-    border-radius: 40px;
-    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.4);
+    border-radius: 60px;
     background: none;
 }
 
@@ -81,3 +80,99 @@
     background-size: 60%;
 }
 
+/* test */
+.main-skills-body-right {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-skills-body-right-body,
+.main-skills-body-right-footer {
+    width: 100%;
+}
+
+.main-skills-body-right-body {
+    border-radius: 60px 60px 0 0;
+    flex: 9;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.4);
+}
+
+.main-skills-body-right-footer {
+    flex: 1;
+
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.4);
+}
+
+.main-skills-body-right-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 100%; /* <-- обязательно */
+}
+
+.footer-btn-footer-btn-1 {
+    margin-left: 40px;
+    opacity: 0.5;
+}
+
+.footer-btn-footer-btn-2 {
+    margin-right: 40px;
+    transform: scaleX(-1);
+    opacity: 0.5;
+}
+
+.main-skills-body-right-body {
+    margin-bottom: 30px;
+}
+
+.main-skills-body-right-footer-btn2 img,
+.main-skills-body-right-footer-btn1 img {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* BODY = вертикальный контейнер */
+.main-skills-body-right-body {
+    display: flex;
+    flex-direction: column; /* вертикально */
+    height: 100%;           /* чтобы проценты работали */
+}
+
+/* LOGO блок — верхние 50% */
+.main-skills-body-right-body-logo {
+    flex: 1;                /* 50% */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* SVG адаптируется именно по высоте контейнера */
+.main-skills-body-right-body-logo img {
+    height: 100%;           /* занимает всю доступную высоту своей половины */
+    width: auto;            /* сохраняет пропорции */
+    object-fit: contain;    /* НЕ режет изображение */
+}
+
+/* TEXT блок — нижние 50% */
+.main-skills-body-right-body-info {
+    flex: 1;                /* 50% */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 40px;
+    text-align: center;
+}
+
+.main-skills-body-right-body-info h2,
+.main-skills-body-right-body-info p {
+    color: white;
+    margin: 0;
+}
+
+.main-skills-body-right-body-logo {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

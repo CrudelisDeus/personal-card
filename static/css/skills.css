@@ -110,7 +110,7 @@
     align-items: center;
     justify-content: space-between;
 
-    height: 100%; /* <-- обязательно */
+    height: 100%;
 }
 
 .footer-btn-footer-btn-1 {
@@ -134,31 +134,27 @@
     margin-bottom: 10px;
 }
 
-/* BODY = вертикальный контейнер */
 .main-skills-body-right-body {
     display: flex;
-    flex-direction: column; /* вертикально */
-    height: 100%;           /* чтобы проценты работали */
+    flex-direction: column;
+    height: 100%;
 }
 
-/* LOGO блок — верхние 50% */
 .main-skills-body-right-body-logo {
-    flex: 1;                /* 50% */
+    flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-/* SVG адаптируется именно по высоте контейнера */
 .main-skills-body-right-body-logo img {
-    height: 100%;           /* занимает всю доступную высоту своей половины */
-    width: auto;            /* сохраняет пропорции */
-    object-fit: contain;    /* НЕ режет изображение */
+    height: 100%;
+    width: auto;
+    object-fit: contain;
 }
 
-/* TEXT блок — нижние 50% */
 .main-skills-body-right-body-info {
-    flex: 1;                /* 50% */
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -173,6 +169,22 @@
 }
 
 .main-skills-body-right-body-logo {
-    margin-top: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.main-skills-body-right-body-logo img {
+    opacity: 0.4;
+}
+
+.main-skills-body-right-body-info {
+    opacity: 0.6;
+}
+
+.main-skills-body-right-body-info p {
+    font-size: 20px;
+}
+
+.main-skills-body-right-body-info h2 {
     margin-bottom: 10px;
 }
